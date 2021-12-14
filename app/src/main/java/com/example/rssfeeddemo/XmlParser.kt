@@ -18,7 +18,6 @@ class XmlParser {
             val factory = XmlPullParserFactory.newInstance()
             val parser = factory.newPullParser()
             val url = URL("https://www.techrepublic.com/rssfeeds/topic/android/")
-            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false)
             parser.setInput(url.openStream(), null)
             var eventType = parser.eventType
             while(eventType != XmlPullParser.END_DOCUMENT){
